@@ -106,6 +106,7 @@ public class Vue extends JFrame{
 
     public void miseAJour() {
         panneauColore.setBackground(model.getColor());
+        etiqCouleur.setText(String.valueOf(model.getColor().getRGB()));
     }
 
     public void setModel(Modele model) {
