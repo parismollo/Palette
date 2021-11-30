@@ -56,6 +56,19 @@ public class Vue extends JFrame{
         rappeler.setText("Rappeller");
         complementaire.setText("Complémentaire");
 
+        // JSliders config
+        rouge.setMajorTickSpacing(25);
+        rouge.setPaintTicks(false);
+        rouge.setPaintLabels(true);
+
+        vert.setMajorTickSpacing(25);
+        vert.setPaintTicks(true);
+        vert.setPaintLabels(true);
+
+        bleu.setMajorTickSpacing(25);
+        bleu.setPaintTicks(true);
+        bleu.setPaintLabels(true);
+
         
         // JPanel content addition (colore)
         panneauColore.add(etiqCouleur, BorderLayout.CENTER);
@@ -69,7 +82,6 @@ public class Vue extends JFrame{
         buttonsPannel.add(complementaire);
         // JPanel content addition (choix)
         panneauChoix.add(slidersPannel, BorderLayout.CENTER);
-        // panneauChoix.add(new JSeparator(), BorderLayout.CENTER);
         panneauChoix.add(buttonsPannel, BorderLayout.SOUTH);
 
         
