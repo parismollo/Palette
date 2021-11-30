@@ -7,7 +7,7 @@ public class Vue extends JFrame{
     static final String TITLE = "Palette";
     static final int WIDTH = 800;
     static final int HEIGHT = 600;
-    static final int MAX_VALUE = 100;
+    static final int MAX_VALUE = 255;
     static final int MIN_VALUE = 0;
 
     // JPanels
@@ -82,6 +82,7 @@ public class Vue extends JFrame{
         // JLabels addChangeListener
         memoriser.addActionListener((event)-> {controleur.memoriserPressed();});
         rappeler.addActionListener((event)-> {controleur.rappelerPressed();});
+        complementaire.addActionListener((event)-> {controleur.complementairePressed();});
 
 
         

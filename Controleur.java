@@ -22,6 +22,21 @@ public class Controleur {
         vue.miseAJour();
     }
 
+    public void complementairePressed() {
+        Color currentColor = model.getColor();
+
+        int compRouge = 255 - currentColor.getRed();
+        int compVert = 255 - currentColor.getGreen();
+        int compBleu = 255 - currentColor.getBlue();
+
+        vue.rouge.setValue(compRouge);
+        vue.vert.setValue(compVert);
+        vue.bleu.setValue(compBleu);
+
+        model.color = new Color(compRouge, compVert, compBleu);
+        vue.miseAJour();
+    }
+
     public void setModel(Modele model) {
         this.model = model;
     }
