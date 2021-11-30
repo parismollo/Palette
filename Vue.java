@@ -30,15 +30,12 @@ public class Vue extends JFrame{
     JSlider bleu = new JSlider(JSlider.HORIZONTAL, MIN_VALUE,  MAX_VALUE, MIN_VALUE);
 
 
-    // Model
+    // Model et Controleur
     Modele model;
     Controleur controleur;
     
 
-    public Vue(Modele model, Controleur controleur) {
-        // Set model and controleur
-        this.model = model;
-        this.controleur = controleur;
+    public Vue() {
         // JFrame config
         this.setTitle(TITLE);
         this.setSize(WIDTH, HEIGHT);
@@ -65,16 +62,21 @@ public class Vue extends JFrame{
 
         // JSliders config
         rouge.setMajorTickSpacing(25);
-        rouge.setPaintTicks(false);
+        rouge.setPaintTicks(true);
         rouge.setPaintLabels(true);
+        rouge.addChangeListener((event)-> {controleur.sliderMoved();});
+
 
         vert.setMajorTickSpacing(25);
         vert.setPaintTicks(true);
         vert.setPaintLabels(true);
+        vert.addChangeListener((event)-> {controleur.sliderMoved();});
+
 
         bleu.setMajorTickSpacing(25);
         bleu.setPaintTicks(true);
         bleu.setPaintLabels(true);
+        bleu.addChangeListener((event)-> {controleur.sliderMoved();});
 
         
         // JPanel content addition (colore)
@@ -97,6 +99,14 @@ public class Vue extends JFrame{
 
     public void miseAJour() {
         panneauColore.setBackground(model.getColor());
+    }
+
+    public void setModel(Modele model) {
+        this.model = model;
+    }
+
+    public void setControleur(Controleur contr) {
+        this.controleur = contr;
     }
 
 }

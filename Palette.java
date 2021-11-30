@@ -1,14 +1,23 @@
 public class Palette {
-    private Vue view;
+    private Vue vue;
 
     public Palette() {
-        // Create Model
+        
+        // Creation model
         Modele model = new Modele();
-        // Create Controleur
+        // Creation vue
+        vue = new Vue();
+        // Creation controleur
         Controleur controleur = new Controleur();
-        // Create Vue
-        view = new Vue(model, controleur);
-        view.setVisible(true);
+
+        // Set relation MVC
+        controleur.setModel(model);
+        controleur.setVue(vue);
+        vue.setControleur(controleur);
+        vue.setModel(model);
+        
+        // Set visibilite vue
+        vue.setVisible(true);
     }
 
     public static void main(String[] args) {
