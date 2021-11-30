@@ -4,4 +4,4 @@
 - [x] Exercice 3 (JComponents)
 - [x] Exercice 4 (JLabel)
 - [x] Exercice 5 (Layout)
-- [ ] Exercice 6
+- [x] Exercice 6 (Sliders and JButtons)

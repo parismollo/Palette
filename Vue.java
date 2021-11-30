@@ -28,10 +28,17 @@ public class Vue extends JFrame{
     JSlider rouge = new JSlider(JSlider.HORIZONTAL, MIN_VALUE,  MAX_VALUE, MIN_VALUE);
     JSlider vert = new JSlider(JSlider.HORIZONTAL, MIN_VALUE,  MAX_VALUE, MIN_VALUE);
     JSlider bleu = new JSlider(JSlider.HORIZONTAL, MIN_VALUE,  MAX_VALUE, MIN_VALUE);
+
+
+    // Model
+    Modele model;
+    Controleur controleur;
     
 
-    public Vue() {
-
+    public Vue(Modele model, Controleur controleur) {
+        // Set model and controleur
+        this.model = model;
+        this.controleur = controleur;
         // JFrame config
         this.setTitle(TITLE);
         this.setSize(WIDTH, HEIGHT);
@@ -72,20 +79,24 @@ public class Vue extends JFrame{
         
         // JPanel content addition (colore)
         panneauColore.add(etiqCouleur, BorderLayout.CENTER);
+
         // JPanel content addition (slides)
         slidersPannel.add(rouge);
         slidersPannel.add(vert);
         slidersPannel.add(bleu);
+
         // JPanel content addition (buttons)
         buttonsPannel.add(memoriser);
         buttonsPannel.add(rappeler);
         buttonsPannel.add(complementaire);
+
         // JPanel content addition (choix)
         panneauChoix.add(slidersPannel, BorderLayout.CENTER);
         panneauChoix.add(buttonsPannel, BorderLayout.SOUTH);
+    }
 
-        
-        
+    public void miseAJour() {
+        panneauColore.setBackground(model.getColor());
     }
 
 }
