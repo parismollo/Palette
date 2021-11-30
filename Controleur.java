@@ -9,6 +9,19 @@ public class Controleur {
         vue.miseAJour();
     }
 
+    public void memoriserPressed() {
+        model.memoire = new Color(model.color.getRGB());
+    }
+    public void rappelerPressed() {
+
+        vue.rouge.setValue(model.memoire.getRed());
+        vue.vert.setValue(model.memoire.getGreen());
+        vue.bleu.setValue(model.memoire.getBlue());
+
+        model.color = new Color(model.memoire.getRGB());    
+        vue.miseAJour();
+    }
+
     public void setModel(Modele model) {
         this.model = model;
     }

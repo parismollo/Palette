@@ -5,3 +5,8 @@
 - [x] Exercice 4 (JLabel)
 - [x] Exercice 5 (Layout)
 - [x] Exercice 6 (Sliders and JButtons)
+- [x] Exercice 7
+- [x] Exercice 8
+- [x] Exercice 9
+- [x] Exercice 10
+- [x] Exercice 11

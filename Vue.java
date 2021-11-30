@@ -78,6 +78,12 @@ public class Vue extends JFrame{
         bleu.setPaintLabels(true);
         bleu.addChangeListener((event)-> {controleur.sliderMoved();});
 
+
+        // JLabels addChangeListener
+        memoriser.addActionListener((event)-> {controleur.memoriserPressed();});
+        rappeler.addActionListener((event)-> {controleur.rappelerPressed();});
+
+
         
         // JPanel content addition (colore)
         panneauColore.add(etiqCouleur, BorderLayout.CENTER);
