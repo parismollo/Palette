@@ -13,6 +13,8 @@ public class Vue extends JFrame{
     // JPanels
     JPanel panneauColore = new JPanel();
     JPanel panneauChoix = new JPanel();
+    JPanel slidersPannel = new JPanel();
+    JPanel buttonsPannel = new JPanel();
 
     // JLabels
     JLabel etiqCouleur = new JLabel();
@@ -29,32 +31,47 @@ public class Vue extends JFrame{
     
 
     public Vue() {
-        // Frame config
+
+        // JFrame config
         this.setTitle(TITLE);
         this.setSize(WIDTH, HEIGHT);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.getContentPane().setLayout(new GridLayout(0, 2));
 
-        // Panel config
+        // JPanel config
         panneauColore.setBackground(new Color(0, 255, 0));
         panneauColore.setLayout(new BorderLayout());
-        panneauChoix.setLayout(new GridLayout(3, 0));
+        panneauChoix.setLayout(new BorderLayout());
+        slidersPannel.setLayout(new GridLayout(3, 0));
+        buttonsPannel.setLayout(new GridLayout(0, 3));
 
-        // Frame content addition
+        // JFrame content addition
         this.getContentPane().add(panneauChoix);
         this.getContentPane().add(panneauColore);
 
-        // Label config
+        // JLabel config
         etiqCouleur.setText("Vert");
         etiqCouleur.setHorizontalAlignment(JLabel.CENTER);
-        
-        // Panel content addition (colore)
-        panneauColore.add(etiqCouleur, BorderLayout.CENTER);
+        memoriser.setText("Mémoriser");
+        rappeler.setText("Rappeller");
+        complementaire.setText("Complémentaire");
 
-        // Panel content addition (choix)
-        panneauChoix.add(rouge);
-        panneauChoix.add(vert);
-        panneauChoix.add(bleu);
+        
+        // JPanel content addition (colore)
+        panneauColore.add(etiqCouleur, BorderLayout.CENTER);
+        // JPanel content addition (slides)
+        slidersPannel.add(rouge);
+        slidersPannel.add(vert);
+        slidersPannel.add(bleu);
+        // JPanel content addition (buttons)
+        buttonsPannel.add(memoriser);
+        buttonsPannel.add(rappeler);
+        buttonsPannel.add(complementaire);
+        // JPanel content addition (choix)
+        panneauChoix.add(slidersPannel, BorderLayout.CENTER);
+        // panneauChoix.add(new JSeparator(), BorderLayout.CENTER);
+        panneauChoix.add(buttonsPannel, BorderLayout.SOUTH);
+
         
         
     }
