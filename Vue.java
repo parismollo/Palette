@@ -6,10 +6,15 @@ public class Vue extends JFrame{
     static final int WIDTH = 800;
     static final int HEIGHT = 600;
 
+    JPanel panneauColore = new JPanel();
+
     public Vue() {
-        super.setTitle(TITLE);
-        super.setSize(WIDTH, HEIGHT);
-        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setTitle(TITLE);
+        this.setSize(WIDTH, HEIGHT);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        panneauColore.setBackground(new Color(0, 255, 0));
+        this.getContentPane().add(panneauColore);
     }
-    
+
 }
