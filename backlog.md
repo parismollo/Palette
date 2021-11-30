@@ -10,3 +10,4 @@
 - [x] Exercice 9
 - [x] Exercice 10
 - [x] Exercice 11
+- [x] Exercice 12
