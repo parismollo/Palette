@@ -3,4 +3,5 @@
 - [x] Exercice 2 (Vue)
 - [x] Exercice 3 (JComponents)
 - [x] Exercice 4 (JLabel)
-- [ ] Exercice 5 (Layout)
+- [x] Exercice 5 (Layout)
+- [ ] Exercice 6
